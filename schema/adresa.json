@@ -1,0 +1,38 @@
+{
+"nazev": "Adresa",
+"version": "1.0.0",
+"autor": "O.Golasowski",
+"license": "e-OS",
+"repository": [
+    {
+    "type": "e-OS",
+    "url": "https://www.e-os.cz/schema/adresa.json"
+    },
+    {
+    "type": "git",
+    "url": "https://www.e-os.cz/schema/adresa.json"
+    }
+],
+"properties": {
+            "id": {
+                "description": "The unique identifier for a product",
+                "type": "serial"
+                },
+            "street_address": {
+                "description": "Street name and housenumber",
+                "type": "string"
+                },
+            "city": {
+                "description": "City",
+                "type": "string"
+                },
+            "state": {
+                "description": "State",
+                "type": "string"
+                }
+          },
+"required": ["street_address", "city", "state"],
+"select_data": {
+              "type_address": ["Billing","Shipping"]
+              }
+}          
